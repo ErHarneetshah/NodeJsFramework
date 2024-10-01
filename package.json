@@ -1,0 +1,27 @@
+{
+  "name": "node_framework",
+  "version": "1.0.0",
+  "description": "This project is a framework made to work with nodejs for either web development or api development or any other kind of requirement you have to work with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node testRun"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "html",
+    "css",
+    "react",
+    "express",
+    "mongoDB",
+    "Node",
+    "Framework",
+    "project",
+    "structure"
+  ],
+  "author": "Harneet shah singh",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
