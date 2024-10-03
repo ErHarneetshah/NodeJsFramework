@@ -9,11 +9,10 @@ exports.createTableTemplate = (tabelName) => {
                 );\`;
 
     // Executing the Query 
-    let con = connection.run_simple_query(sql);`
+    let con = connection.run_simple_query(sql);`;
 };
 
-
-exports.createTableTemplate = (tabelName) => {
+exports.insertRecordTemplate = (tabelName) => {
   return `const connection = require('./connection'); // establish connection
 
     // Executable Query
@@ -23,8 +22,7 @@ exports.createTableTemplate = (tabelName) => {
     let con = connection.run_simpleValue_query(sql);`;
 };
 
-
-exports.createTableTemplate = (tabelName) => {
+exports.updateRecordTemplate = (tabelName) => {
   return `const connection = require('./connection'); // establish Connection
 
     // Executable Query
@@ -32,4 +30,30 @@ exports.createTableTemplate = (tabelName) => {
 
     // Executing Query
     let con = connection.run_simpleValue_query(sql);`;
+};
+
+exports.deleteRecordTemplate = (tabelName) => {
+  return `const connection = require('./connection'); // establish Connection
+  
+      // Executable Query
+      let sql = \`DELETE FROM ${tabelName} WHERE condition;\`;
+  
+      // Executing Query
+      let con = connection.run_simpleValue_query(sql);`;
+};
+
+exports.alterTableTemplate = (tabelName) => {
+  return `const connection = require('./connection'); // establish Connection
+  
+      // Executable Query
+      let sql = \`ALTER TABLE ${tabelName} ADD column_name datatype;\`;
+  
+      // Executing Query
+      let con = connection.run_simpleValue_query(sql);`;
+};
+
+exports.createControllerTemplate = () => {
+  return `const index = () => {
+    return "Welcome";
+}`
 };
