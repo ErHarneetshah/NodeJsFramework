@@ -15,8 +15,7 @@ const type = firstSplit[0];
 
 //* Finding the module type of file to be created
 let filePath = "";
-if(type == 'database') filePath = globalVariables.DATABASE_DIR_PATH;
-else if(type == 'controller') filePath = globalVariables.CONTROLLER_DIR_PATH;
+if(type == 'controller') filePath = globalVariables.CONTROLLER_DIR_PATH;
 else if(type == 'model') filePath = globalVariables.MODELS_DIR_PATH;
 else if(type == 'route') filePath = globalVariables.ROUTES_DIR_PATH;
 else if(type == 'view') filePath = globalVariables.VIEWS_DIR_PATH;
@@ -29,7 +28,7 @@ let fileSegments = fileName.split('_');
 
 
 //* Creating that Requested File
-if(type == 'database')
+if(type == 'module')
 {
     let dbFileType = fileSegments[0];
 

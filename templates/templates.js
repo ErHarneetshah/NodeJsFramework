@@ -57,3 +57,19 @@ exports.createControllerTemplate = () => {
     return "Welcome";
 }`
 };
+
+
+
+exports.createModuleTemplate = () => {
+  return `const connection = require('./connection'); // establish connection
+  
+    // Executable Query
+    let sql = \`CREATE TABLE 'table_name' (
+                id INT AUTO_INCREMENT PRIMARY KEY, 
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                );\`;
+
+    // Executing the Query 
+    let con = connection.run_simple_query(sql);`
+}
